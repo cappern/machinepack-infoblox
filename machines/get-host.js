@@ -81,8 +81,6 @@ module.exports = {
 
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-    //https://ib02.ude.oslo.no/wapi/v1.6/record:host?name~=apa.gs
-
 
     Http.sendHttpRequest({
       baseUrl: 'https://' + inputs.host + '/wapi/v' + inputs.api + '/record:host?name'+ operator + inputs.call,
@@ -92,7 +90,7 @@ module.exports = {
         "Authorization" : "Basic " + new Buffer(inputs.username + ":" + inputs.password).toString("base64"),
       }
     }).exec({
-      // OK.
+      // Returns an array
       success: function(result) {
 
         try {

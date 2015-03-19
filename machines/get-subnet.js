@@ -110,7 +110,6 @@ module.exports = {
                 "Authorization": "Basic " + new Buffer(inputs.username + ":" + inputs.password).toString("base64"),
             }
         }).exec({
-            // OK.
             success: function(result) {
                 var obj = {};
 
@@ -128,6 +127,7 @@ module.exports = {
                 }
 
                 return exits.success(obj);
+                //Returns an object.
 
             },
             notOk: function(result) {
