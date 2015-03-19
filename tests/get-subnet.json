@@ -1,0 +1,9 @@
+{
+  "machine": "get-subnet",
+  "expectations": [
+    {
+      "using": {},
+      "outcome": "error"
+    }
+  ]
+}

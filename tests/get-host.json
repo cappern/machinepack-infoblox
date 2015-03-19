@@ -1,0 +1,9 @@
+{
+  "machine": "get-host",
+  "expectations": [
+    {
+      "using": {},
+      "outcome": "error"
+    }
+  ]
+}
