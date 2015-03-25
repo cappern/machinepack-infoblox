@@ -9,7 +9,7 @@
 Make rest calls for the Infoblox WAPI
 
 
-## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-infoblox.svg)](http://badge.fury.io/js/machinepack-infoblox) [![Build Status](https://travis-ci.org/cappern/machinepack-infoblox.svg?branch=master)](https://travis-ci.org/cappern/machinepack-infoblox)
+## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-infoblox.svg)](http://badge.fury.io/js/machinepack-infoblox)
 
 ```sh
 $ npm install machinepack-infoblox
