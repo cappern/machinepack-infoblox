@@ -14,6 +14,9 @@ Make rest calls for the Infoblox WAPI
 ```sh
 $ npm install machinepack-infoblox
 ```
+## Contributions
+
+Pull requests are welcome
 
 ## Usage
 
