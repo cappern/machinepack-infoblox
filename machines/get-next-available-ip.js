@@ -1,16 +1,16 @@
 module.exports = {
 
 
-  friendlyName: 'Get next available IP',
+    friendlyName: 'Get next available IP',
 
 
-  description: 'Get the next available IP-address(es) from a subnet',
+    description: 'Get the next available IP-address(es) from a subnet',
 
 
-  extendedDescription: '',
+    extendedDescription: '',
 
 
-  inputs: {
+    inputs: {
         host: {
             example: 'infoblox-host.customer.com',
             description: 'The host address of the Infoblox appliance',
@@ -59,7 +59,15 @@ module.exports = {
         },
 
         success: {
-            description: 'Done.',
+            example: {
+                ips: ['10.210.0.3',
+                    '10.210.0.4',
+                    '10.210.0.5',
+                    '10.210.0.6',
+                    '10.210.0.7'
+                ]
+            },
+
         },
 
     },
@@ -85,7 +93,9 @@ module.exports = {
                 "Authorization": "Basic " + new Buffer(inputs.username + ":" + inputs.password).toString("base64"),
                 "Content-Type": "application/json"
             },
-            params: {"num": inputs.num}
+            params: {
+                "num": inputs.num
+            }
         }).exec({
             success: function(result) {
                 var obj = {};

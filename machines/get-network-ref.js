@@ -54,7 +54,7 @@ module.exports = {
         },
 
         success: {
-            description: 'Done.',
+            example: { reference: 'ZG5zLm5ldHdvcmskMTAuMjEwLjAuMC8yNC9w' },
         },
 
     },

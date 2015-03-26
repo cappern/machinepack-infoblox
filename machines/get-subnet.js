@@ -33,12 +33,12 @@ module.exports = {
         },
         exattr: {
             example: 'Building',
-            description: 'The extensible attribute to call by. (Case sensitive)',
+            description: 'The extensible attribute to search by. (Case sensitive)',
             required: true
         },
         call: {
             example: 'foo',
-            description: 'The call to make for Infoblox',
+            description: 'The search string',
             required: true
         },
         strictSearch: {
@@ -69,7 +69,37 @@ module.exports = {
         },
 
         success: {
-            description: 'Done.',
+            description: 'Returns an object.',
+            example: {
+                reference: 'network/ZG5zLm5ldHdvcmskMTAuMjE3ljEzOC4wLzIzLzA:10.217.138.0/23/DEFAULT',
+                network: '10.217.138.0/23',
+                extattrs: {
+                    LocationID: {
+                        value: '7896'
+                    },
+                    Networkname: {
+                        inheritance_source: {
+                            _ref: 'networkcontainer/ZG5zLm5ldHdvcmtfY29udGFpbmVyJDEwLjIxNi4wLjAvMTUvMA:10.216.0.0/15/DEFAULT'
+                        },
+                        value: 'Management'
+                    },
+                    Responsibleperson: {
+                        value: 'someperson@somecompany.com'
+                    },
+                    Sitename: {
+                        value: 'Somecompany'
+                    },
+                    Building: {
+                        value: 'foo'
+                    },
+                    VLAN: {
+                        inheritance_source: {
+                            _ref: 'networkcontainer/ZG5zLm5ldHdvcmtfY29udGFpbmVyJDEwLjIxNi4wLjAvMTUvMA:10.216.0.0/15/UDE'
+                        },
+                        value: '60'
+                    }
+                }
+            }
         },
 
     },
