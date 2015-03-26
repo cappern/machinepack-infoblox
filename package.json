@@ -1,6 +1,6 @@
 {
   "name": "machinepack-infoblox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make rest calls for the Infoblox WAPI",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
@@ -30,7 +30,9 @@
     "machineDir": "machines/",
     "machines": [
       "get-host",
-      "get-subnet"
+      "get-subnet",
+      "get-next-available-ip",
+      "get-network-ref"
     ]
   }
 }

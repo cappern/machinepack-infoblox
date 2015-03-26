@@ -28,7 +28,7 @@ module.exports = {
         },
         api: {
             example: '1.6',
-            description: 'The API version',
+            description: 'The API version. eg. "1.6"',
             required: true
         },
         exattr: {
