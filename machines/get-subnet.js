@@ -70,36 +70,34 @@ module.exports = {
 
         success: {
             description: 'Returns an object.',
-            example: {
-                reference: 'network/ZG5zLm5ldHdvcmskMTAuMjE3ljEzOC4wLzIzLzA:10.217.138.0/23/DEFAULT',
-                network: '10.217.138.0/23',
-                extattrs: {
-                    LocationID: {
-                        value: '7896'
+            example: [{
+                "_ref": "network/ZG5zLm5ldHdvcmskMTAuMjE2LjIuMC8yMy8w:10.216.2.0/23/Default",
+                "extattrs": {
+                    "LocationID": {
+                        "value": "968096"
                     },
-                    Networkname: {
-                        inheritance_source: {
-                            _ref: 'networkcontainer/ZG5zLm5ldHdvcmtfY29udGFpbmVyJDEwLjIxNi4wLjAvMTUvMA:10.216.0.0/15/DEFAULT'
+                    "NetworkName": {
+                        "inheritance_source": {
+                            "_ref": "networkcontainer/ZG5zLm5ldHdvcmtfY29udGFpbmVyJDEwLjIxNi4wLjAvMTUvMA:10.216.0.0/15/Default"
                         },
-                        value: 'Management'
+                        "value": "Clients"
                     },
-                    Responsibleperson: {
-                        value: 'someperson@somecompany.com'
+                    "Building": {
+                        "value": "Fifth"
                     },
-                    Sitename: {
-                        value: 'Somecompany'
+                    "Location": {
+                        "value": "South"
                     },
-                    Building: {
-                        value: 'foo'
-                    },
-                    VLAN: {
-                        inheritance_source: {
-                            _ref: 'networkcontainer/ZG5zLm5ldHdvcmtfY29udGFpbmVyJDEwLjIxNi4wLjAvMTUvMA:10.216.0.0/15/UDE'
+                    "VLAN": {
+                        "inheritance_source": {
+                            "_ref": "networkcontainer/ZG5zLm5ldHdvcmtfY29udGFpbmVyJDEwLjIxNi4wLjAvMTUvMA:10.216.0.0/15/Default"
                         },
-                        value: '60'
+                        "value": "60"
                     }
-                }
-            }
+                },
+                "network": "10.216.2.0/23",
+                "network_view": "Default"
+            }]
         },
 
     },
@@ -127,7 +125,6 @@ module.exports = {
         var formattedurl = 'https://' + inputs.host + '/wapi/v' + inputs.api + '/network?*' + inputs.exattr + ':' + operator + inputs.call + inputs.optional + '&_return_fields%2B=extattrs';
 
         formattedurl = formattedurl.replace('\u0020', "%20");
-        console.log(formattedurl);
         process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 
@@ -156,7 +153,7 @@ module.exports = {
                     return exits.error('An error occurred while parsing the reponse from Infoblox.');
                 }
 
-                return exits.success(obj);
+                return exits.success(data);
                 //Returns an object.
 
             },

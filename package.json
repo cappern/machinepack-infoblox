@@ -1,6 +1,6 @@
 {
   "name": "machinepack-infoblox",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Make rest calls for the Infoblox WAPI",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
