@@ -11,6 +11,7 @@
   },
   "keywords": [
     "Infoblox",
+    "Infoblox NIOS",
     "machines",
     "machinepack"
   ],
@@ -34,5 +35,13 @@
       "get-next-available-ip",
       "get-network-ref"
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/cappern/machinepack-infoblox/issues"
+  },
+  "homepage": "https://github.com/cappern/machinepack-infoblox",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
   }
 }
