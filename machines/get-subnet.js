@@ -70,34 +70,7 @@ module.exports = {
 
         success: {
             description: 'Returns an object.',
-            example: [{
-                "_ref": "network/ZG5zLm5ldHdvcmskMTAuMjE2LjIuMC8yMy8w:10.216.2.0/23/Default",
-                "extattrs": {
-                    "LocationID": {
-                        "value": "968096"
-                    },
-                    "NetworkName": {
-                        "inheritance_source": {
-                            "_ref": "networkcontainer/ZG5zLm5ldHdvcmtfY29udGFpbmVyJDEwLjIxNi4wLjAvMTUvMA:10.216.0.0/15/Default"
-                        },
-                        "value": "Clients"
-                    },
-                    "Building": {
-                        "value": "Fifth"
-                    },
-                    "Location": {
-                        "value": "South"
-                    },
-                    "VLAN": {
-                        "inheritance_source": {
-                            "_ref": "networkcontainer/ZG5zLm5ldHdvcmtfY29udGFpbmVyJDEwLjIxNi4wLjAvMTUvMA:10.216.0.0/15/Default"
-                        },
-                        "value": "60"
-                    }
-                },
-                "network": "10.216.2.0/23",
-                "network_view": "Default"
-            }]
+            example: []
         },
 
     },
@@ -142,12 +115,6 @@ module.exports = {
 
                 try {
                     var data = JSON.parse(result.body);
-
-                    for (var i = 0; i < data.length; i++) {
-                        obj.reference = data[i]._ref;
-                        obj.network = data[i].network;
-                        obj.extattrs = data[i].extattrs
-                    };
 
                 } catch (e) {
                     return exits.error('An error occurred while parsing the reponse from Infoblox.');
