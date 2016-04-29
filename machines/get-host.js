@@ -63,22 +63,6 @@ module.exports = {
                 name: 'box-port.localdomain',
                 ipv4: '10.216.2.1',
                 dhcpEnabled: false
-            }, {
-                name: 'box.op-00.localdomain',
-                ipv4: '10.216.3.0',
-                dhcpEnabled: false
-            }, {
-                name: 'box.op-c1.localdomain',
-                ipv4: '10.216.2.39',
-                dhcpEnabled: false
-            }, {
-                name: 'box.op-c1-crypt1',
-                ipv4: '10.41.62.77',
-                dhcpEnabled: false
-            }, {
-                name: 'box.op-c1-crypt2',
-                ipv4: '10.41.61.2',
-                dhcpEnabled: false
             }],
         },
 
